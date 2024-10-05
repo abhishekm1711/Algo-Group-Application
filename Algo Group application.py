@@ -22,9 +22,8 @@ print(findDuplicate([2,2,1,3]))
 print(findDuplicate([1,4,2,4,3]))
 
 
-#Sort has time complexity O(n+1 log n+1), while running through the list
-#has time complexity n+1
-print("Second algorithm")
+#Sort has time complexity O(n log n), while running through the list
+#has time complexity O(n)
 def findDuplicate(input: List[int]) -> int:
     result = {}
     for item in input:
@@ -40,6 +39,6 @@ print(findDuplicate([5,8,9,2,3,4,1,7,8,6]))
 print(findDuplicate([2,2,1,3]))
 print(findDuplicate([1,4,2,4,3]))
 
-
-    
-
+#The initial dictionary creation has time complexity O(n) while sorting through
+#the list has time complexity O(n) in the worst case. This is more effective
+#than the first algorithm
